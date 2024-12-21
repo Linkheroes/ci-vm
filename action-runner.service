@@ -1,0 +1,13 @@
+[Unit]
+Description=Run Action Runner Script
+After=network.target
+
+[Service]
+User=action
+WorkingDirectory=/home/action/actions-runner
+ExecStart=/home/action/actions-runner/run.sh
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
